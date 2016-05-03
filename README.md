@@ -21,7 +21,8 @@ To run the gateway node directly on the host machine, execute
 docker run -v `pwd`/tinc:/etc/tinc tinc-gateway
 ```
 
-## Configuring a node to contact the gateway
+## Adding a node to the vpn
 
 Copy tinc/hosts/gateway to the hosts folder on node
 
+Copy the node's host file to tinc/hosts/

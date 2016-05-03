@@ -9,14 +9,17 @@ created by tinc. This is achieved by setting `DeviceType = dummy` in
 ## Setting up a new VPN
 
 1. Edit tinc/hosts/gateway to add in the public IP/DNS for the gateway
-2. Build the Docker image
-```
-docker build -t tinc-gateway .
-```
-3. Generate the public/private key pair for the gateway node
-```
-docker run -v `pwd`/tinc:/etc/tinc tinc-gateway -K4096
-```
+
+
+1. Build the Docker image
+  ```
+  docker build -t tinc-gateway .
+  ```
+
+1. Generate the public/private key pair for the gateway node
+  ```
+  docker run -v `pwd`/tinc:/etc/tinc tinc-gateway -K4096
+  ```
 
 ## Running the gateway node
 

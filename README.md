@@ -6,7 +6,7 @@ No special capabilties or privileges are needed on the host as no interface is
 created by tinc. This is achieved by setting `DeviceType = dummy` in
 `tinc.conf`.
 
-## Setting up a new VPN
+## Configuring the gateway
 
 1. Edit tinc/hosts/gateway to add in the public IP/DNS for the gateway
 
@@ -21,7 +21,7 @@ created by tinc. This is achieved by setting `DeviceType = dummy` in
   docker run -v `pwd`/tinc:/etc/tinc tinc-gateway -K4096
   ```
 
-## Running the gateway node
+## Running the gateway
 
 To run the gateway node directly on the host machine, execute
 ```
@@ -30,6 +30,8 @@ docker run -v `pwd`/tinc:/etc/tinc tinc-gateway
 
 ## Adding a node to the vpn
 
-Copy tinc/hosts/gateway to the hosts folder on node
+1. Generate public/private key pair for the node
 
-Copy the node's host file to tinc/hosts/
+1. Copy the node's host file to tinc/hosts/
+
+1. Copy tinc/hosts/gateway to the hosts folder on node and start the node

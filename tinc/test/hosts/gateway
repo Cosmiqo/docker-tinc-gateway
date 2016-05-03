@@ -1,0 +1,2 @@
+Address = <public IP or DNS>
+Subnet = 10.0.0.1/32

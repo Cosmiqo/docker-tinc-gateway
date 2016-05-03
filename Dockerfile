@@ -6,4 +6,4 @@ RUN apk add --update tinc && rm -rf /var/cache/apk/*
 EXPOSE 655/tcp 655/udp
 
 ENTRYPOINT ["/usr/sbin/tincd"]
-CMD [ "-D", "-n", "test", "-U", "nobody", "-d" ]
+CMD [ "-D", "-U", "nobody", "-d" ]

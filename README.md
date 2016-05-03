@@ -2,6 +2,9 @@
 
 Setup based on https://www.digitalocean.com/community/tutorials/how-to-install-tinc-and-set-up-a-basic-vpn-on-ubuntu-14-04
 
+This node is meant to be accessible from a public IP and be the first node that
+other nodes on the VPN connects to.
+
 No special capabilties or privileges are needed on the host as no interface is
 created by tinc. This is achieved by setting `DeviceType = dummy` in
 `tinc.conf`.

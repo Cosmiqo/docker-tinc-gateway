@@ -19,7 +19,10 @@ created by tinc. This is achieved by setting `DeviceType = dummy` in
   docker build -t tinc-gateway .
   ```
 
-1. Generate the public/private key pair for the gateway node
+1. Generate 4096 bits RSA public/private key pair for the gateway node. The private key
+   will be written as tinc/rsa_key.priv and the public key will be appended to
+   tinc/hosts/gateway.
+
   ```
   docker run -v `pwd`/tinc:/etc/tinc tinc-gateway -K4096
   ```
